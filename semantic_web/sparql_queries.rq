@@ -1,0 +1,52 @@
+
+PREFIX ex: <http://example.org/electronics/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# Query 1: Retrieve all taxonomy concepts
+
+SELECT ?concept ?label
+WHERE {
+    ?concept a skos:Concept ;
+             skos:prefLabel ?label .
+}
+ORDER BY ?label
+
+
+# Query 2: Retrieve direct child categories of Electronics
+
+SELECT ?category ?label
+WHERE {
+    ?category skos:broader ex:Electronics ;
+              skos:prefLabel ?label .
+}
+ORDER BY ?label
+
+
+# Query 3: Retrieve all descendants of Electronics
+
+SELECT ?category ?label
+WHERE {
+    ?category skos:broader+ ex:Electronics ;
+              skos:prefLabel ?label .
+}
+ORDER BY ?label
+
+
+# Query 4: Find all concepts in the taxonomy scheme
+
+SELECT ?concept ?label
+WHERE {
+    ?concept skos:inScheme ex:ElectronicsScheme ;
+             skos:prefLabel ?label .
+}
+ORDER BY ?label
+
+
+# Query 5: Count concepts in each category level
+
+SELECT ?parent (COUNT(?child) AS ?childCount)
+WHERE {
+    ?child skos:broader ?parent .
+}
+GROUP BY ?parent
+ORDER BY DESC(?childCount)

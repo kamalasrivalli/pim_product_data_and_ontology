@@ -1,0 +1,2 @@
+supplier_sku,brand,product_name,category,ram,storage,weight,description,ram_gb,storage_gb,weight_g,errors,warnings
+,ASUS,Vivobook 15,Laptops,16GB,512GB SSD,1.7kg,Everyday laptop,16.0,512.0,1700.0,Missing required field: supplier_sku,

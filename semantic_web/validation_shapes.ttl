@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/electronics/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Shape 1: Validate taxonomy concepts
+
+ex:ElectronicsConceptShape
+    a sh:NodeShape ;
+
+    sh:targetClass skos:Concept ;
+
+    # Every concept must have a preferred label
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "Every concept must have a preferred label."
+    ] ;
+
+    # Every concept must belong to the electronics scheme
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue ex:ElectronicsScheme ;
+        sh:message "Concept must belong to ElectronicsScheme."
+    ] .
+
+
+# Shape 2: Validate concept labels
+
+ex:LabelShape
+    a sh:NodeShape ;
+
+    sh:targetSubjectsOf skos:prefLabel ;
+
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:datatype rdf:langString ;
+        sh:minCount 1 ;
+        sh:message "Preferred labels must be language-tagged strings."
+    ] .

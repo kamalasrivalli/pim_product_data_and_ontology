@@ -1,0 +1,6 @@
+supplier_sku,brand,product_name,category,ram_gb,storage_gb,weight_g,description,warnings
+LNV101,Lenovo,ThinkPad E14,Laptops,16.0,512.0,1500.0,,Description missing; Possible matching product: review before merging
+LNV102,Lenovo,ThinkPad E14,Laptops,16.0,512.0,1500.0,,Description missing; Possible matching product: review before merging
+HP202,HP,ProBook 450,Laptops,8.0,256.0,,Business laptop,Weight missing or invalid; Possible matching product: review before merging
+DL303,Dell,Latitude 5450,Laptops,16.0,1000.0,1600.0,Professional laptop,
+HP204,HP,ProBook 450,Laptops,8.0,256.0,1400.0,Portable business laptop,Possible matching product: review before merging

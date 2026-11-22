@@ -1,0 +1,8 @@
+
+supplier_sku,brand,product_name,category,ram,storage,weight,description
+LNV101,LENOVO,ThinkPad E14,Laptops,16GB,512GB SSD,1.5kg,
+LNV102,Lenovo,ThinkPad E14,Laptops,16 GB,512 GB SSD,1500 g,
+HP202,HP,ProBook 450,Laptops,8GB,256GB SSD,,Business laptop
+DL303,Dell,Latitude 5450,Laptops,16 GB,1TB SSD,1.6 kg,Professional laptop
+HP204,HP,ProBook 450,Laptops,8GB,256GB SSD,1.4kg,Portable business laptop
+,ASUS,Vivobook 15,Laptops,16GB,512GB SSD,1.7kg,Everyday laptop

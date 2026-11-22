@@ -1,0 +1,125 @@
+
+@prefix ex: <http://example.org/electronics/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Concept scheme
+ex:ElectronicsScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "Electronics Product Taxonomy"@en .
+
+# Root concept
+ex:Electronics
+    a skos:Concept ;
+    skos:prefLabel "Electronics"@en ;
+    skos:inScheme ex:ElectronicsScheme .
+
+# Main categories
+ex:Computers
+    a skos:Concept ;
+    skos:prefLabel "Computers"@en ;
+    skos:broader ex:Electronics ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:MobileDevices
+    a skos:Concept ;
+    skos:prefLabel "Mobile Devices"@en ;
+    skos:broader ex:Electronics ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Audio
+    a skos:Concept ;
+    skos:prefLabel "Audio"@en ;
+    skos:broader ex:Electronics ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Accessories
+    a skos:Concept ;
+    skos:prefLabel "Accessories"@en ;
+    skos:broader ex:Electronics ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:SmartHome
+    a skos:Concept ;
+    skos:prefLabel "Smart Home"@en ;
+    skos:broader ex:Electronics ;
+    skos:inScheme ex:ElectronicsScheme .
+
+# Computer subcategories
+ex:Laptops
+    a skos:Concept ;
+    skos:prefLabel "Laptops"@en ;
+    skos:broader ex:Computers ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Desktops
+    a skos:Concept ;
+    skos:prefLabel "Desktops"@en ;
+    skos:broader ex:Computers ;
+    skos:inScheme ex:ElectronicsScheme .
+
+# Mobile device subcategories
+ex:Smartphones
+    a skos:Concept ;
+    skos:prefLabel "Smartphones"@en ;
+    skos:broader ex:MobileDevices ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Tablets
+    a skos:Concept ;
+    skos:prefLabel "Tablets"@en ;
+    skos:broader ex:MobileDevices ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Smartwatches
+    a skos:Concept ;
+    skos:prefLabel "Smartwatches"@en ;
+    skos:broader ex:MobileDevices ;
+    skos:inScheme ex:ElectronicsScheme .
+
+# Audio subcategories
+
+ex:Headphones a skos:Concept ;
+    skos:prefLabel "Headphones"@en ;
+    skos:broader ex:Audio ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Earbuds a skos:Concept ;
+    skos:prefLabel "Earbuds"@en ;
+    skos:broader ex:Audio ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Speakers a skos:Concept ;
+    skos:prefLabel "Speakers"@en ;
+    skos:broader ex:Audio ;
+    skos:inScheme ex:ElectronicsScheme .
+
+
+# Accessories subcategories
+
+ex:Chargers a skos:Concept ;
+    skos:prefLabel "Chargers"@en ;
+    skos:broader ex:Accessories ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Keyboards a skos:Concept ;
+    skos:prefLabel "Keyboards"@en ;
+    skos:broader ex:Accessories ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:Mice a skos:Concept ;
+    skos:prefLabel "Mice"@en ;
+    skos:broader ex:Accessories ;
+    skos:inScheme ex:ElectronicsScheme .
+
+
+# Smart Home subcategories
+
+ex:SmartCameras a skos:Concept ;
+    skos:prefLabel "Smart Cameras"@en ;
+    skos:broader ex:SmartHome ;
+    skos:inScheme ex:ElectronicsScheme .
+
+ex:SmartBulbs a skos:Concept ;
+    skos:prefLabel "Smart Bulbs"@en ;
+    skos:broader ex:SmartHome ;
+    skos:inScheme ex:ElectronicsScheme .
